@@ -1,0 +1,38 @@
+WHY YOU SEE "visitor-log not found"
+====================================
+Your LIVE site is missing the new files. We checked:
+  https://rixtreat1.netlify.app/visitor-log-detect.html  → 404 NOT FOUND
+
+That means Netlify never got the logging files. Your token is fine.
+
+
+FIX — REDEPLOY (do this exactly)
+================================
+1. Open folder: C:\Users\zxynt\OneDrive\Apps\Sources
+
+2. Select ALL files EXCEPT node_modules:
+   - index.html, forms.html, visitor-log-detect.html
+   - visitor-log.js, logger-config.js, styles.css, script.js
+   - images folder, netlify.toml, etc.
+   (Do NOT upload only index.html — upload the whole folder)
+
+3. Zip the folder OR drag the whole Sources folder to:
+   https://app.netlify.com/drop
+   (same site rixtreat1 — overwrite deploy)
+
+4. After deploy, test these URLs in your browser:
+   ✓ https://rixtreat1.netlify.app/forms.html          (should load, NOT 404)
+   ✓ https://rixtreat1.netlify.app/visitor-log-detect.html
+
+5. Netlify dashboard → Forms → you should see "visitor-log"
+
+6. Visit https://rixtreat1.netlify.app/ once
+
+7. Run: npm run netlify-logs
+
+
+STILL EMPTY FORMS TAB?
+======================
+- Netlify → Site settings → Forms → ensure form detection is ON
+- Wait 2–3 minutes after deploy
+- Try "Clear cache and deploy" in Netlify deploy settings

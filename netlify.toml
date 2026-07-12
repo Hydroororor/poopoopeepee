@@ -1,0 +1,6 @@
+# Minimal config — works with drag-and-drop AND Git deploy.
+# Visitor logs on drag-and-drop use Netlify Forms (dashboard → Forms).
+# For Command Prompt logs, run: npm start
+
+[build]
+  publish = "."

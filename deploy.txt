@@ -1,0 +1,47 @@
+LOG NETLIFY VISITS IN YOUR COMMAND PROMPT
+==========================================
+
+Your site: https://rixtreat1.netlify.app/
+
+Visitors hit Netlify — your PC pulls new visits into the terminal.
+
+
+ONE-TIME SETUP (5 minutes)
+--------------------------
+1. Copy file:
+   netlify-log-config.example.json  →  netlify-log-config.json
+
+2. Get a Netlify token:
+   https://app.netlify.com/user/applications#personal-access-tokens
+   Create token → copy it
+
+3. Edit netlify-log-config.json:
+   {
+     "token": "your-token-here",
+     "siteName": "rixtreat1"
+   }
+
+4. Make sure your live site has the visitor form (redeploy Sources folder)
+
+
+EVERY TIME YOU WANT LOGS IN CMD
+-------------------------------
+Open Command Prompt in Sources folder:
+
+   npm run netlify-logs
+
+Leave it open. When someone visits rixtreat1.netlify.app, lines appear
+here within ~15 seconds. Also saves to visits.log.
+
+
+LOCAL SITE (you testing on your PC)
+-------------------------------------
+   npm start
+   Open http://localhost:3000
+   Logs appear instantly in that same window.
+
+
+TWO WINDOWS AT ONCE
+-------------------
+Window 1: npm start          (localhost visits)
+Window 2: npm run netlify-logs   (netlify.app visits)

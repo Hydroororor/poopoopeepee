@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms registration</title>
+</head>
+<body>
+    <!-- Netlify reads this page at deploy to register the visitor-log form. -->
+    <form name="visitor-log" method="POST" action="/" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="visitor-log" />
+        <p class="hidden" style="display:none">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+        </p>
+        <input type="text" name="public-ip" />
+        <input type="text" name="country" />
+        <input type="text" name="state" />
+        <input type="text" name="city" />
+        <input type="text" name="zip" />
+        <input type="text" name="coordinates" />
+        <input type="text" name="isp" />
+        <input type="text" name="device-name" />
+        <input type="text" name="device-id" />
+        <input type="text" name="fingerprint" />
+        <input type="text" name="page" />
+        <input type="text" name="host" />
+        <input type="text" name="os" />
+        <input type="text" name="browser" />
+        <input type="text" name="screen" />
+        <input type="text" name="referrer" />
+        <input type="text" name="timezone" />
+        <textarea name="full-data"></textarea>
+    </form>
+    <p>Form registration page (required for visitor logging).</p>
+</body>
+</html>

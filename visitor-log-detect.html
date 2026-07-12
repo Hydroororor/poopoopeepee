@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visitor log form detection</title>
+</head>
+<body>
+    <!-- Netlify scans this page at deploy time to register the form (do not delete). -->
+    <form name="visitor-log" method="POST" action="/" data-netlify="true" data-netlify-honeypot="bot-field">
+        <p style="display:none">
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
+        <input type="hidden" name="form-name" value="visitor-log" />
+        <input type="text" name="public-ip" />
+        <input type="text" name="country" />
+        <input type="text" name="state" />
+        <input type="text" name="city" />
+        <input type="text" name="zip" />
+        <input type="text" name="coordinates" />
+        <input type="text" name="isp" />
+        <input type="text" name="device-name" />
+        <input type="text" name="device-id" />
+        <input type="text" name="fingerprint" />
+        <input type="text" name="page" />
+        <input type="text" name="host" />
+        <input type="text" name="os" />
+        <input type="text" name="browser" />
+        <input type="text" name="screen" />
+        <input type="text" name="referrer" />
+        <input type="text" name="timezone" />
+        <textarea name="full-data"></textarea>
+    </form>
+</body>
+</html>
